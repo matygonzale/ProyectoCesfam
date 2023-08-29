@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>HTML Forms</h2>
+
+<form method="post">
+  {% csrf_token %}
+  <label for="run">run:</label><br>
+  {{form.Run}}<br>
+  <label for="dv">dv:</label><br>
+  {{form.dv}}<br>
+  <label for="nombre">nombre:</label><br>
+  {{form.nombre}}<br>
+  <label for="apellido">apellido:</label><br>
+  {{form.apellido}}<br>
+  <label for="telefono">telefono:</label><br>
+  {{form.telefono}}<br>
+  <label for="tutor">tutor:</label><br>
+  {{form.tutor}}<br>
+  <label for="cronico">cronico:</label><br>
+  {{form.cronico}}<br>
+  <label for="telefono_tutor">telefono_tutor:</label><br>
+  {{form.telefono_tutor}}<br>
+  <label for="nacimiento">nacimiento:</label><br>
+  {{form.nacimiento}}<br>
+  <label for="direccion">direccion:</label><br>
+  {{form.direccion}}<br>
+  <label for="genero">genero:</label><br>
+  {{form.genero}}<br>
+  <label for="correo">correo:</label><br>
+  {{form.correo}}<br>
+  <label for="carnet">carnet:</label><br>
+  {{form.idCarnet_Paciente}}<br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+</body>
+</html>

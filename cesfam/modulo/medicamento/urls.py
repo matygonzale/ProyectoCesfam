@@ -1,0 +1,38 @@
+from django.urls import path
+from modulo.medicamento.api import *
+from modulo.medicamento.views import *
+
+urlpatterns = [
+    path('medicamento/', medicamento_api_view, name='medicamento_api'),
+    path('medicamento/<int:pk>/', medicamento_detail_view, name='medicamento_detail_api' ),
+    path('proovedor/', proovedor_api_view, name='proovedor_api'),
+    path('proovedor/<int:pk>/', proovedor_detail_view, name='proovedor_detail_api'),
+    path('estadostock/', estadoStock_api_view, name='estadostock_api'),
+    path('estadostock/<int:pk>/', estadoStock_detail_view, name='estadostock_detail_api'),
+    path('estadomedicamento/', estadomedicamento_api_view, name='estadomedicamento_api'),
+    path('estadomedicamento/<int:pk>/', estadomedicamento_detail_view, name='estadomedicamento_detail_api'),
+    path('solicitudmedicamento/', solicitudmedi_api_view, name='solicitudmedicamento_api'),
+    path('solicitudmedicamento/<int:pk>/', solicitudmedi_detail_view, name='solicitudmedicamento_detail_api'),
+    path('lote/', lote_api_view, name= 'lote_api'),
+    path('lote/<int:pk>/', lote_detail_view, name='lote_detail_api'),
+    path('crearestadomedicamento/', crear_estadomedicamento, name= 'crearestadomedicamento'),
+    path('editarestadomedicamento/<int:pk>/', editar_estadomedicamento, name= 'editarestadomedicamento'),
+    path('eliminarestadomedicamento/<int:pk>/', eliminar_estadomedicamento, name= 'eliminarestadomedicamento'),
+    path('buscarmedicamento/', buscar_medicamento, name='buscarmedicamento'),
+    path('listar/', listar_medicamento, name='listarmedicamento'),
+    path('crearestadostock/', crear_estadostock, name= 'crearestadostock'),
+    path('editarestadostock/<int:pk>/', editar_estadostock, name= 'editarestadostock'),
+    path('eliminarestadostock/<int:pk>/', eliminar_estadostock, name= 'eliminarestadostock'),
+    path('crearproovedor/', crear_proovedor, name= 'crearproovedor'),
+    path('editarproovedor/<int:pk>/', editar_proovedor, name= 'editarproovedor'),
+    path('eliminarproovedor/<int:pk>/', eliminar_proovedor, name= 'eliminarproovedor'),
+    path('crearmedicamento/', crear_medicamento, name= 'crearmedicamento'),
+    path('editarmedicamento/<int:pk>/', editar_medicamento, name= 'editarmedicamento'),
+    path('eliminarmedicamento/<int:pk>/', eliminar_medicamento, name= 'eliminarmedicamento'),
+    path('crearsolicitudmedi/', crear_solicitudmedi, name= 'crearsolicitudmedi'),
+    path('editarsolicitudmedi/<int:pk>/', editar_solicitudmedi, name= 'editarsolicitudmedi'),
+    path('eliminarsolicitudmedi/<int:pk>/', eliminar_solicitudmedi, name= 'eliminarsolicitudmedi'),
+    path('crearlote/', crear_lote, name= 'crearlote'),
+    path('editarlote/<int:pk>/', editar_lote, name= 'editarlote'),
+    path('eliminarlote/<int:pk>/', eliminar_lote, name= 'eliminarlote'),
+]

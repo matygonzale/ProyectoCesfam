@@ -1,0 +1,35 @@
+
+<html>
+<body>
+
+<form method = "GET">
+  
+
+    <label for="fname">Rut:</label><br>
+    <input type="text" id="bbuscar" name="buscar"><br>
+    <button type="submit">buscar</button>
+    
+    
+</form>
+
+<form method = "POST">
+  {% csrf_token %}
+  <label for="stock">Correo:</label><br>
+  <input type="text" id="idasunto" name="asunto"><br>
+  <input type="text" id="idmensaje" name="mensaje"><br>
+  <input type="text" id="idcorreoo" name="correoo"><br>
+  <button type="submit">Enviar</button>
+</form>
+
+<form method = "POST">
+  {% csrf_token %}
+  <label for="stock">Reservas:</label><br>
+  {{form.idCarnet_Paciente}}<br>
+  {{form.idPrescripcion}}<br>
+  {{form.idMedicamento}}<br>
+  {{form.cantidad}}<br>
+  <button type="submit">Enviar</button>
+</form>
+
+</body>
+</html>
